@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     ---Very-dark-cyan: hsl(183, 100%, 15%);
     ---Dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -6,12 +12,6 @@
     ---Light-grayish-cyan: hsl(185, 41%, 84%);
     ---Very-light-grayish-cyan: hsl(189, 41%, 97%);
     ---White: hsl(0, 0%, 100%);
-}
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body{
