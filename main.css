@@ -1,0 +1,207 @@
+:root{
+    ---Very-dark-cyan: hsl(183, 100%, 15%);
+    ---Dark-grayish-cyan: hsl(186, 14%, 43%);
+    ---Grayish-cyan: hsl(184, 14%, 56%);
+    ---Strong-cyan: hsl(172, 67%, 45%);
+    ---Light-grayish-cyan: hsl(185, 41%, 84%);
+    ---Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    ---White: hsl(0, 0%, 100%);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(---Light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+}
+.logo
+{
+    text-align: center;
+    margin-top: 1.7rem;
+    margin-bottom: 2.1rem;
+}
+.tip-caculator{
+    display: flex;
+    flex-direction: column;
+    background-color: var(---White);
+    padding: 2rem;
+    border-radius: 1rem 1rem 0 0;
+}
+label
+{
+    color: var(---Dark-grayish-cyan);
+    margin-bottom: 0.3rem;
+    font-family: 700;
+}
+input
+{
+    color: var(---Very-dark-cyan);
+    border: none;
+    outline: none;
+    padding: 4px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: 'Space Mono', monospace;
+    padding-right: 15px;
+    border-radius: 4px;
+    background-color: var(---Very-light-grayish-cyan);
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+}
+.bill-input
+{
+    background-image: url(/images/icon-dollar.svg);
+    margin-bottom: 36px;
+}
+.tip
+{
+    margin-top: 0.7rem;
+    display: grid;
+    grid-template-columns: 144px 144px;
+    row-gap: 2px;
+    column-gap: 10px;
+    margin-bottom: 2rem;
+}
+.tips
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(---White);
+    height: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 4px;
+    background-color: var(---Very-dark-cyan);
+}
+.active-tip
+{
+    font-weight: bolder;
+    color: var(---Very-dark-cyan);
+    background-color: var(---Strong-cyan);
+}
+.people-input
+{
+    background-image: url(/images/icon-person.svg);
+    margin-bottom: 2.4rem;
+}
+.result
+{
+    background-color: var(---Very-dark-cyan);
+    color: white;
+    padding: 31px 20px;
+    border-radius: 13px
+}
+.tip-amount, .Total
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+.person
+{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(---Grayish-cyan);
+}
+.amount
+{
+    font-size: 28px;
+    color:var(---Strong-cyan);
+    font-weight: 700;
+}
+.reset
+{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color:var(---Very-dark-cyan);
+    background-color: var(---Strong-cyan);
+    padding: 9px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#tip-custom input
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+#tip-custom input:focus::placeholder{
+    color: transparent;
+}
+.peapleLabel
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width:1000px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        width: 415px;
+        padding: 5px;
+        /* background-position: 17px 18px; */
+    }
+    .tip-caculator{
+        width: 990px;
+        flex-direction: row;
+        border-radius: 1.4rem;
+        padding: 2.3em;
+        height: 470px;
+        margin-top: 5rem;
+        margin-left: 1.5rem;
+    }
+    .partOne{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-left: 1.2rem;
+    }
+    .bill-input{
+        margin-bottom: 3.4rem;
+    }
+    .tip
+    {
+        grid-template-columns: 135px 135px 135px;
+        row-gap: 1.2em;
+        column-gap: 17px;
+        margin-bottom: 3.2rem;
+    }
+    #tip-custom input,
+    .tips
+    {
+        height: 55px;
+    }
+    .result
+    {
+        margin-left: auto;
+        width: 400px;
+        display: flex;
+        align-content: space-between;
+        flex-direction: column;
+        padding: 40px 38px;
+    }
+    .amount
+    {
+        font-size: 28px;
+    }
+    .reset
+    {
+        padding: 13px 0;
+        margin-top: auto;
+    }
+}
